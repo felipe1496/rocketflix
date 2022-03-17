@@ -14,6 +14,7 @@ export const Container = styled.div`
     @media (max-width: 600px) {
         flex-direction: column;
         align-items: center;
+        text-align: center;
     }
 `
 
@@ -29,12 +30,18 @@ export const Description = styled.div`
 
         margin-bottom: 19px;
     }
+    
 
     > span {
         font-size: 16px;
         font-weight: 300;
+        color: var(--subtitle);
 
-        color: var(--subtitle)
+    }
+    
+    @media (max-width: 600px) {
+        align-items: center;
+        width: 70%;
     }
 
 

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { ReactNode, useContext } from 'react'
 import { MovieContext } from '../../Contexts/MovieContexts';
 
 import { Container, Description } from './styles';
@@ -17,6 +17,7 @@ async function getMovies(page: number | undefined) {
         const response = await fetch(BASE_URL + '?' + API_KEY + '&' + language + '&' + pageNumber + page)
         const data = await response.json()
         result = data.results;
+
     } catch (error) {
         console.error(error)
     }
@@ -24,7 +25,7 @@ async function getMovies(page: number | undefined) {
 
 const MovieContent: React.FC = () => {
     const { page, movie } = useContext(MovieContext);
-    let currentMovie
+    let currentMovie;
     getMovies(page);
     if (movie !== undefined) {
         currentMovie = result[movie]
