@@ -1,5 +1,5 @@
 <h1 align="center">
-RocketCoffee
+RocketFlix
 </h1>
 
 <p align="center">RocketCoffee Challenge for study purposes.</p>
